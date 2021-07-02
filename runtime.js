@@ -16,12 +16,10 @@ function doublerAppend(nums){
 function doublerInsert(nums){
 
     let new_nums = [];
-
     for (let i=0; i<nums.length; i++){
         let num = nums[i] * 2;
         new_nums.unshift(num);
     }
-
 }
 
 
@@ -47,16 +45,16 @@ const extraLargeArray = getSizedArray(100000);
 
 // Try it with first function
 perf.start();                     // Starts timer
-doublerAppend(extraLargeArray);
+doublerAppend(tinyArray);
 let resultsAppend = perf.stop();  // Stops timer and save time results
 
 
 // Try it with second function
 perf.start();
-doublerInsert(extraLargeArray);
+doublerInsert(tinyArray);
 let resultsInsert = perf.stop();
 
 
-console.log('Results for the extraLargeArray');
+console.log('Results for the tinyArray');
 console.log("insert", resultsInsert.preciseWords);
 console.log("append", resultsAppend.preciseWords);
